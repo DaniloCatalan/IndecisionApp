@@ -54,4 +54,12 @@ describe('Counter Component', () => {
     expect(value).toBe('101')
 
   })
+
+  test('Debe establecer el valor por defecto', () => {
+    const {start} = wrapper.props()
+    
+    const value = wrapper.find('[data-test-id="counter"]').text()
+    expect(Number(value)).toBe(start)
+
+  })
 })
